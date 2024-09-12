@@ -1,4 +1,4 @@
-# bootiq-technical-task
+# Bootiq-technical-task
 This repo is a technical task for BootiQ
 
 ## Prerequisites
