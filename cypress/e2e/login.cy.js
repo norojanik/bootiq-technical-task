@@ -7,7 +7,7 @@ describe("OrangeHRM Login Automation", () => {
     cy.visit("/");
   });
 
-  it(" Successful Login with Valid Credentials", () => {
+  it("Successful login with valid credentials", () => {
     // Enter username
     cy.get('input[name="username"]').type(adminName);
 
@@ -22,7 +22,7 @@ describe("OrangeHRM Login Automation", () => {
     cy.get(".oxd-layout-context").should("be.visible");
   });
 
-  it(" Unsuccessful Login with Invalid Password", () => {
+  it("Unsuccessful login with invalid password", () => {
     // Enter username
     cy.get('input[name="username"]').type(adminName);
 
@@ -36,7 +36,7 @@ describe("OrangeHRM Login Automation", () => {
     cy.contains("Invalid credentials").should("be.visible");
   });
 
-  it(" Unsuccessful Login with Invalid UserName", () => {
+  it("Unsuccessful login with invalid UserName", () => {
     // Enter username
     cy.get('input[name="username"]').type(randomString());
 
@@ -50,7 +50,7 @@ describe("OrangeHRM Login Automation", () => {
     cy.contains("Invalid credentials").should("be.visible");
   });
 
-  it("Unsuccessful Login with Empty Fields", () => {
+  it("Unsuccessful login with Empty Fields", () => {
     // Click the login button
     cy.get("button[type=Submit]").click();
 
@@ -60,7 +60,7 @@ describe("OrangeHRM Login Automation", () => {
       .and("be.visible");
   });
 
-  it("Unsuccessful Login with Only Username Filled", () => {
+  it("Unsuccessful login with only username filled", () => {
     // Enter username
     cy.get('input[name="username"]').type(adminName);
 
@@ -73,7 +73,7 @@ describe("OrangeHRM Login Automation", () => {
       .and("be.visible");
   });
 
-  it("Unsuccessful Login with Only Password Filled", () => {
+  it("Unsuccessful login with only password filled", () => {
     // Enter password
     cy.get('input[name="password"]').type(password);
 
@@ -86,7 +86,7 @@ describe("OrangeHRM Login Automation", () => {
       .and("be.visible");
   });
 
-  it(" Verify 'Forgot Your Password?' Link and page", () => {
+  it("Verify 'Forgot Your Password?' link and page", () => {
     //Assert forgot you password and navigate to that page
     cy.get("p.orangehrm-login-forgot-header")
       .should("have.text", "Forgot your password? ")
