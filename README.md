@@ -19,6 +19,6 @@ Ensure you have the following installed before running the tests:
    `npm install`
 
   ## Running the Tests 
-    `npx cypress open` <br>
+    `npx cypress open`
   Then, choose the browser and start the tests.
 
